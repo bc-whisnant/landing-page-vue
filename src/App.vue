@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav />
+    <div class="hero-box">
+      <div class="hero-box-left">
+        <LargeText>
+          Your trusted web developers, just a click away.
+        </LargeText>
+        <MediumText>
+          Meet our team of web dev experts ready to take on your biggest
+          challenges and turn them into opportunities to outshine your
+          competition. Connect with us today to get started.
+        </MediumText>
+      </div>
+      <div class="hero-box-right">
+        <Form />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Nav from "./components/Nav.vue";
+import Form from "./components/Form.vue";
+import LargeText from "./components/LargeText.vue";
+import MediumText from "./components/MediumText.vue";
+
+
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Nav,
+    Form,
+    LargeText,
+    MediumText
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+body {
+  background: #fff;
+  color: #777;
 }
+.hero-box {
+    background: #f3f3ff;
+    display: flex;
+}
+.hero-box-left {
+    width: 400px;
+    margin: 25px;
+}
+.hero-box-right {
+    width: 100%;
+    margin: 25px; 
+}
+
+
+
 </style>
